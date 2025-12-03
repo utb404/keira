@@ -1,0 +1,52 @@
+# Конфигурация Test Generator
+
+# Настройки LLM
+llm:
+  provider: "ollama"
+  ollama:
+    url: "localhost:11434"  # URL Ollama сервера
+    model: "deepseek-v3.1:latest"   # Модель для использования
+    temperature: 0.3                # Температура генерации (0.0-2.0)
+    max_tokens: 4000                # Максимум токенов
+    timeout: 300                     # Таймаут запроса в секундах
+    max_retries: 3                   # Максимум повторных попыток
+    retry_delay: 1.0                 # Задержка между повторами
+
+# Настройки генерации
+generation:
+  output_path: "./generated_tests"   # Путь для сохранения результатов
+  overwrite_existing: false          # Перезаписывать существующие файлы
+  format_code: true                  # Форматировать код
+  validate_code: true                # Валидировать сгенерированный код
+  quality_level: "balanced"          # Уровень качества (fast, balanced, high)
+  code_style: "standard"             # Стиль кода (standard, compact, verbose)
+  include_comments: true             # Включать комментарии
+  detail_level: "medium"             # Уровень детализации (low, medium, high)
+  format_style: "black"              # Стиль форматирования (black, ruff, autopep8)
+  generate_page_objects: true       # Генерировать Page Object классы
+  generate_fixtures: true            # Генерировать фикстуры pytest
+  use_cdp: true                      # Использовать CDP для определения селекторов
+
+# Настройки репозитория (опционально)
+repository:
+  type: "gitlab"                   # Тип репозитория (gitlab, git)
+  gitlab_url: "https://gitlab.url"  # Базовый URL GitLab сервера
+  project_path: "project/path"  # Путь к проекту в GitLab
+  auth:
+    type: "token"                   # Тип аутентификации (token, ssh)
+    token: "TOKEN"        # Токен доступа GitLab
+  index_path: "./.test_generator/index.json"
+  auto_index: true                 # Автоматическая индексация
+
+# Настройки CDP (опционально)
+cdp:
+  enabled: true                     # Включить CDP интеграцию
+  browser: "chromium"                # Браузер (chromium, firefox, webkit)
+  headless: true                     # Headless режим
+
+# Логирование
+logging:
+  level: "INFO"                      # Уровень логирования (DEBUG, INFO, WARNING, ERROR)
+  file: "./test_generator.log"       # Файл логов (опционально)
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+

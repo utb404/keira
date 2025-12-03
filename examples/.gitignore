@@ -1,0 +1,17 @@
+# Сгенерированные тесты
+generated_tests/
+*.pyc
+__pycache__/
+
+# Логи
+*.log
+test_generator.log
+
+# Индексы репозиториев
+.test_generator/
+index.json
+
+# Временные файлы
+*.tmp
+*.bak
+

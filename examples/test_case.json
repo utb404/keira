@@ -1,0 +1,79 @@
+{
+    "id": "PLAYWRIGHT_INTRO_001",
+    "name": "[E2E] Playwright Python. Проверка установки и примера теста",
+    "description": "Проект: Playwright Python Documentation\nТест-план: Getting Started (ID: intro)\nТест-сьют: Installation (ID: intro)\nПриоритет: 1\nСтатус автоматизации: Автоматизирован\nДата изменения статуса: 2025-11-30T10:34:00Z",
+    "preconditions": "Установлен pytest-playwright и браузеры (playwright install)",
+    "expectedResult": "Страница корректно отображается, все ключевые элементы видимы и функциональны",
+    "epic": "Playwright Documentation",
+    "feature": "Getting Started",
+    "story": "Installation Guide",
+    "component": "Python Docs",
+    "testLayer": "E2E",
+    "severity": "NORMAL",
+    "priority": "1",
+    "environment": "Chrome Headless",
+    "browser": "chromium",
+    "owner": "QA Lead Automation Engineer",
+    "author": "QA Lead Automation Engineer",
+    "reviewer": "",
+    "testCaseId": "PLAYWRIGHT_INTRO_001",
+    "issueLinks": "",
+    "testCaseLinks": "",
+    "tags": "playwright, pytest, e2e, documentation",
+    "testType": "automated",
+    "steps": [
+      {
+        "id": "1",
+        "name": "Шаг 1",
+        "description": "Перейти на страницу документации",
+        "expectedResult": "Страница загружается\nЗаголовок содержит 'Installation | Playwright Python'",
+        "status": "",
+        "bugLink": "",
+        "skipReason": "",
+        "attachments": ""
+      },
+      {
+        "id": "2",
+        "name": "Шаг 2",
+        "description": "Проверить основной заголовок раздела",
+        "expectedResult": "Заголовок 'Installation' видим на странице",
+        "status": "",
+        "bugLink": "",
+        "skipReason": "",
+        "attachments": ""
+      },
+      {
+        "id": "3",
+        "name": "Шаг 3",
+        "description": "Проверить инструкцию по установке pytest-playwright",
+        "expectedResult": "Команда установки pytest-playwright отображается корректно",
+        "status": "",
+        "bugLink": "",
+        "skipReason": "",
+        "attachments": ""
+      },
+      {
+        "id": "4",
+        "name": "Шаг 4",
+        "description": "Проверить боковую навигацию Getting Started",
+        "expectedResult": "Раздел 'Getting Started' присутствует и развернут",
+        "status": "",
+        "bugLink": "",
+        "skipReason": "",
+        "attachments": ""
+      },
+      {
+        "id": "5",
+        "name": "Шаг 5",
+        "description": "Проверить работоспособность навигационных ссылок",
+        "expectedResult": "Ссылки кликабельны, навигация работает корректно",
+        "status": "",
+        "bugLink": "",
+        "skipReason": "",
+        "attachments": ""
+      }
+    ],
+    "createdAt": 1763905772133,
+    "updatedAt": 1763907340000
+  }
+  
