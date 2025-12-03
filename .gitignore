@@ -155,3 +155,7 @@ config.local.yaml
 .cache/
 *.cache
 
+# Документация по дизайну (внутренняя)
+API_DESIGN.md
+ARCHITECTURE.md
+
